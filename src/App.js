@@ -1,5 +1,4 @@
-import { Route, Routes, Navigate, Link, } from 'react-router-dom';
-
+import { Routes, Route, Navigate, Link, } from 'react-router-dom';
 import AllQuotes from './pages/AllQuotes';
 import QuoteDetail from './pages/QuoteDetail';
 import NewQuote from './pages/NewQuote';
@@ -10,7 +9,7 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Routes path='/' element={ <Navigate to='/quotes' /> } />
+        <Route path='/' element={ <Navigate to='/quotes' /> } />
         <Route path='/quotes' element={ <AllQuotes /> } />
         <Route path='/quotes/:quoteId' element={ <QuoteDetail /> } >
           <Route path='' element={

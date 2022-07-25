@@ -1,11 +1,10 @@
 import { Fragment, useRef, useState } from 'react';
 // import { Prompt } from 'react-router-dom';
-
 import Card from '../UI/Card';
 import LoadingSpinner from '../UI/LoadingSpinner';
 import classes from './QuoteForm.module.css';
-
 const QuoteForm = (props) => {
+    // eslint-disable-next-line
     const [isEntering, setIsEntering] = useState(false);
     const authorInputRef = useRef();
     const textInputRef = useRef();
@@ -21,11 +20,9 @@ const QuoteForm = (props) => {
         const finishEnteringHandler = () => {
             setIsEntering(false);
         };
-
         const formFocusedHandler = () => {
             setIsEntering(true);
     };
-
     return (
     <Fragment>
         {/* <Prompt
@@ -61,5 +58,4 @@ const QuoteForm = (props) => {
     </Fragment>
     );
 };
-
 export default QuoteForm;
